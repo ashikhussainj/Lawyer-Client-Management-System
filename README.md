@@ -7,4 +7,4 @@ Developed a comprehensive web application for managing interactions between clie
 - Appointment and Communication: Once an appointment request is accepted by a lawyer, a private chat box is opened for secure communication between the client and the lawyer. The admin has access to all system data except the private messages in the chat box.
 
 ## Technologies Used: 
-Java, HTML, CSS, JavaScript, JSP, MySQL, NetBeans, Tomcat.
+Java, HTML, CSS, JavaScript, JSP, MySQL.
