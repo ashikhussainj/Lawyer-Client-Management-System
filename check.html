@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example</title>
+</head>
+<body>
+    <h1>Data from MySQL</h1>
+    <div id="data-container"></div>
+
+    <script>
+        function fetchData() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    
+                    console.log(data);
+                    var dataContainer = document.getElementById("data-container");
+                    dataContainer.innerHTML = data.join("<br>");
+                }
+            };
+            xhr.open("GET", "getData", true);
+            xhr.send();
+        }
+
+        fetchData(); // Initial data load
+        setInterval(fetchData, 5000); // Refresh data every 5 seconds
+    </script>
+</body>
+</html>
